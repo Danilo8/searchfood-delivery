@@ -11,6 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * --------------------------------------------------------------------------
+ * Rotas Globais
+ * --------------------------------------------------------------------------
+ */
+Route::get('/','Controller@index');
+Route::get('/sobre','Controller@sobre');
+Route::get('/termos','Controller@termos');
+Route::get('/privacidade','Controller@privacidade');
+Route::get('/contato','Controller@contato');
+
+/**
+ * --------------------------------------------------------------------------
+ * Rotas para os Restaurantes
+ * --------------------------------------------------------------------------
+ */
+Route::get('/restaurante/cadastro','RestaurantController@cadastro');
+Route::get('/restaurante/login','RestaurantController@login');
+
+/**
+ * --------------------------------------------------------------------------
+ * Rotas para os Usuarios
+ * --------------------------------------------------------------------------
+ */
+Route::get('/entrar','UserController@entrar');
+
+/**
+ * --------------------------------------------------------------------------
+ * Rotas para os Administradores
+ * --------------------------------------------------------------------------
+ */
+Route::get('/adm/login','Adminitrator@login');
