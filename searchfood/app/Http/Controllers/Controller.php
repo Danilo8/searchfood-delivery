@@ -12,42 +12,77 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     /**
+     * --------------------------------------------------------------------------
      * Função que retorna a view INDEX
+     * --------------------------------------------------------------------------
      */
     public function index()
     {
-        return view('index');
+        if (view()->exists('index'))
+        {
+            return view('index');
+        } else {
+            echo "Página não encontrada!";
+        }
     }
 
     /**
+     * --------------------------------------------------------------------------
      * Função que retorna a view SOBRE
+     * --------------------------------------------------------------------------
      */
     public function sobre()
     {
-        return view('sobre');
+        if (view()->exists('sobre'))
+        {
+            return view('sobre');
+        } else {
+            echo "Página não encontrada!";
+        }
     }
 
     /**
+     * --------------------------------------------------------------------------
      * Função que retorna a view TERMOS
+     * --------------------------------------------------------------------------
      */
     public function termos()
     {
-        return view('termos');
+        if (view()->exists('termos'))
+        {
+            return view('termos');
+        } else {
+            echo "Página não encontrada!";
+        }
     }
 
     /**
+     * --------------------------------------------------------------------------
      * Função que retorna a view PRIVACIDADE
+     * --------------------------------------------------------------------------
      */
     public function privacidade()
     {
-        return view('privacidade');
+       if (view()->exists('privacidade'))
+        {
+            return view('privacidade');
+        } else {
+            echo "Página não encontrada!";
+        }
     }
 
     /**
+     * --------------------------------------------------------------------------
      * Função que retorna a view CONTATO
+     * --------------------------------------------------------------------------
      */
     public function contato()
     {
-        return view('contato');
+        if (view()->exists('contato'))
+        {
+            return view('contato');
+        } else {
+            echo "Página não encontrada!";
+        }
     }
 }

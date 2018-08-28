@@ -4,22 +4,21 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMenusTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * --------------------------------------------------------------------------
      * Run the migrations.
-     *--------------------------------------------------------------------------
+     * --------------------------------------------------------------------------
      * @return void
      * --------------------------------------------------------------------------
      */
     public function up()
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('restaurant_id');
-            $table->string('product_name');          
-            $table->string('product_description', 500);          
+            $table->string('category_name');
             $table->timestamps();
 
             $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
@@ -36,6 +35,6 @@ class CreateMenusTable extends Migration
     public function down()
     {
         $table->dropForeign(['restaurant_id']);
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('categories');
     }
 }
