@@ -8,14 +8,14 @@ class RestaurantController extends Controller
 {
     /**
      * --------------------------------------------------------------------------
-     * Função que retorna a view CADASTRAR
+     * Função que retorna a view CADASTRO
      * --------------------------------------------------------------------------
      */
-    public function cadastrar()
+    public function cadastro()
     {
-        if (view()->exists('restaurant.cadastrar'))
+        if (view()->exists('restaurant.cadastro'))
         {
-            return view('restaurant.cadastrar');
+            return view('restaurant.cadastro');
         } else {
             echo "Página não encontrada!";
         }
