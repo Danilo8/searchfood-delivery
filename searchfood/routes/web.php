@@ -29,6 +29,7 @@ Route::get('/contato','Controller@contato');
  */
 Route::get('/restaurante/cadastro','RestaurantController@cadastro');
 Route::get('/restaurante/login','RestaurantController@login');
+Route::get('/restaurante/dashboard','RestaurantController@dashboard');
 
 /**
  * --------------------------------------------------------------------------

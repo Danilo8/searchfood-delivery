@@ -1,0 +1,21 @@
+.navbar-brand {
+    margin-left: 2%;
+}
+#logo-text {
+    font-family: 'Copse', sans-serif;
+    font-size: 30px;
+    color: white;
+    vertical-align: bottom;
+}
+.navbar-text span {
+    font-size: 20px;
+}
+.navbar-danger {
+    background-color: #d20911;
+}
+.nav-link {
+    color: #ffffff;
+}
+.nav-link:hover {
+    color: #ffffff;
+}

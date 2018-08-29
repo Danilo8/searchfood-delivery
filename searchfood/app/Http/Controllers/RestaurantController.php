@@ -35,4 +35,19 @@ class RestaurantController extends Controller
             echo "Página não encontrada!";
         }
     }
+    
+    /**
+     * --------------------------------------------------------------------------
+     * Função que retorna a view DASHBOARD
+     * --------------------------------------------------------------------------
+     */
+    public function dashboard()
+    {
+        if (view()->exists('restaurant.dashboard'))
+        {
+            return view('restaurant.dashboard');
+        } else {
+            echo "Página não encontrada!";
+        }
+    }
 }
