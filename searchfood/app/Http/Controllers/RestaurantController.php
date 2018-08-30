@@ -43,9 +43,69 @@ class RestaurantController extends Controller
      */
     public function dashboard()
     {
-        if (view()->exists('restaurant.dashboard'))
+        if (view()->exists('restaurant.dashboard.dashboard'))
         {
-            return view('restaurant.dashboard');
+            return view('restaurant.dashboard.dashboard');
+        } else {
+            echo "Página não encontrada!";
+        }
+    }
+    
+    /**
+     * --------------------------------------------------------------------------
+     * Função que retorna a view PEDIDOS
+     * --------------------------------------------------------------------------
+     */
+    public function pedidos()
+    {
+        if (view()->exists('restaurant.dashboard.pedidos'))
+        {
+            return view('restaurant.dashboard.pedidos');
+        } else {
+            echo "Página não encontrada!";
+        }
+    }
+    
+    /**
+     * --------------------------------------------------------------------------
+     * Função que retorna a view CARDAPIO
+     * --------------------------------------------------------------------------
+     */
+    public function cardapio()
+    {
+        if (view()->exists('restaurant.dashboard.cardapio'))
+        {
+            return view('restaurant.dashboard.cardapio');
+        } else {
+            echo "Página não encontrada!";
+        }
+    }
+    
+    /**
+     * --------------------------------------------------------------------------
+     * Função que retorna a view ADMINISTRADOR
+     * --------------------------------------------------------------------------
+     */
+    public function administrador()
+    {
+        if (view()->exists('restaurant.dashboard.administrador'))
+        {
+            return view('restaurant.dashboard.administrador');
+        } else {
+            echo "Página não encontrada!";
+        }
+    }
+    
+    /**
+     * --------------------------------------------------------------------------
+     * Função que retorna a view RELATORIOS
+     * --------------------------------------------------------------------------
+     */
+    public function relatorios()
+    {
+        if (view()->exists('restaurant.dashboard.relatorios'))
+        {
+            return view('restaurant.dashboard.relatorios');
         } else {
             echo "Página não encontrada!";
         }

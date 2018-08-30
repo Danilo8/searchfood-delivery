@@ -30,6 +30,10 @@ Route::get('/contato','Controller@contato');
 Route::get('/restaurante/cadastro','RestaurantController@cadastro');
 Route::get('/restaurante/login','RestaurantController@login');
 Route::get('/restaurante/dashboard','RestaurantController@dashboard');
+Route::get('/restaurante/pedidos','RestaurantController@pedidos');
+Route::get('/restaurante/cardapio','RestaurantController@cardapio');
+Route::get('/restaurante/administrador','RestaurantController@administrador');
+Route::get('/restaurante/relatorios','RestaurantController@relatorios');
 
 /**
  * --------------------------------------------------------------------------
@@ -44,3 +48,6 @@ Route::get('/entrar','UserController@entrar');
  * --------------------------------------------------------------------------
  */
 Route::get('/adm/login','Adminitrator@login');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
