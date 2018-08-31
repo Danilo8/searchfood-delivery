@@ -36,7 +36,7 @@
             <div class="card mx-5">
                 <div class="card-body">
                     <form id="form-cadastro" action="" method="post">
-                        <div id="owner">
+                        <div style="display: none" id="owner">
                             <h3 class="text-center mt-5 mb-5">Dados do Proprietário</h3>
                             <div class="form-group">
                                 <label for="owner_name">Nome</label>
@@ -55,6 +55,72 @@
                                 <input type="text" name="owner_phone" id="owner_phone" class="form-control" placeholder="Telefone do Proprietário">
                             </div>
                             <div class="form-group text-right">
+                                <button type="button" class="btn btn-lg btn-danger">Continuar</button>
+                            </div>
+                        </div>
+                        <div style="display: none" id="restaurant">
+                            <h3 class="text-center mt-5 mb-5">Dados do Restaurante</h3>
+                            <div class="form-group">
+                                <label for="restaurant_name">Nome</label>
+                                <input type="text" name="restaurant_name" id="restaurant_name" class="form-control" placeholder="Nome do Restaurante">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <label for="cnpj">CNPJ</label>
+                                    <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ do Restaurante">
+                                </div>
+                                <div class="col">
+                                    <label for="restaurant_phone">Telefone</label>
+                                    <input type="text" name="restaurant_phone" id="restaurant_phone" class="form-control" placeholder="Telefone do Restaurante">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Endereço</label>
+                                <input type="text" name="address" id="address" class="form-control" placeholder="Endereço do Restaurante">
+                            </div>
+                            <div class="form-group">
+                                <label for="neighborhood">Bairro</label>
+                                <input type="text" name="neighborhood" id="neighborhood" class="form-control" placeholder="Bairro do Restaurante">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-3">
+                                    <label for="state">Estado</label>
+                                    <select name="state" id="state" class="form-control">
+                                        <option value="">Estado</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="city">Cidade</label>
+                                    <select name="city" id="city" class="form-control">
+                                        <option value="">Cidade</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <label for="cep">CEP</label>
+                                    <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP">
+                                </div>
+                            </div>
+                            <div class="form-group text-right">
+                                <button type="button" class="btn btn-lg btn-secondary">Voltar</button>
+                                <button type="button" class="btn btn-lg btn-danger">Continuar</button>
+                            </div>
+                        </div>
+                        <div id="acesso">
+                            <h3 class="text-center mt-5 mb-5">Dados de Acesso</h3>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Senha">
+                            </div>
+                            <div class="form-group">
+                                <label for="c_password">Confirme a Senha</label>
+                                <input type="password" name="c_password" id="c_password" class="form-control" placeholder="Confirme a Senha">
+                            </div>
+                            <div class="form-group text-right">
+                                <button type="button" class="btn btn-lg btn-secondary">Voltar</button>
                                 <button type="button" class="btn btn-lg btn-danger">Continuar</button>
                             </div>
                         </div>

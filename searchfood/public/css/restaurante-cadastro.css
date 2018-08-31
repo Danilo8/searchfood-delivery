@@ -5,7 +5,15 @@
   border: none;
   border-radius: 50%;
 }
-#form-cadastro {
+#owner {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+#restaurant {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#acesso {
     margin-left: 25%;
     margin-right: 25%;
 }

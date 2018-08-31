@@ -15,7 +15,7 @@
     </ul>
     <ul class="nav justify-content-end">
         @include('templates.notificacoes')
-        @include('templates.notificacoes')
+        
         <span class="nav-item">
             <a href="{{ url('restaurant/logout') }}" class="nav-link">
                 <span style="font-size: 18px" id="logout" class="mx-4">
