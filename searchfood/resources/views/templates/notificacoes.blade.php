@@ -1,7 +1,7 @@
 <div class="dropdown">
     <button style="background-color: transparent" class="btn px-1" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i style="font-size: 25px" class="fa fa-bell text-white"></i>
-        <span style="float: right;font-size: 12px;" class="badge badge-success">0</span>
+        <span style="float: right;font-size: 12px;" class="badge badge-light badge-pill"></span>
     </button>
     <div style="padding-top: 0px;padding-bottom: 0px;position: absolute;" class="dropdown-menu border dropdown-menu-right" aria-labelledby="dropdownMenuButton">
         <div style="color: white" class="card-header bg-dark">

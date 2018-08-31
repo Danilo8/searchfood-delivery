@@ -19,6 +19,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        
+        <!--fa fa-icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <style>
         .container-fluid{background:url('{{asset('img/bg/bg-cadastro-2.jpg')}}')no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
@@ -26,17 +29,17 @@
     <body>
         @include('templates.navbar')
 
-        <div class="container-fluid pt-4">
+        <div style="margin-bottom: 55%" class="container-fluid pt-4">
             <h1 class="text-center pt-5 text-white">
                 Faça parte do Search Food e
                 <p>aumente <span id="writer"></span></p>
             </h1>
         </div>
-        <div class="container mb-4">
+        <div id="container" class="container mb-4">
             <div class="card mx-5">
                 <div class="card-body">
                     <form id="form-cadastro" action="" method="post">
-                        <div style="display: none" id="owner">
+                        <div style="display: block" id="owner">
                             <h3 class="text-center mt-5 mb-5">Dados do Proprietário</h3>
                             <div class="form-group">
                                 <label for="owner_name">Nome</label>
@@ -74,13 +77,15 @@
                                     <input type="text" name="restaurant_phone" id="restaurant_phone" class="form-control" placeholder="Telefone do Restaurante">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="address">Endereço</label>
-                                <input type="text" name="address" id="address" class="form-control" placeholder="Endereço do Restaurante">
-                            </div>
-                            <div class="form-group">
-                                <label for="neighborhood">Bairro</label>
-                                <input type="text" name="neighborhood" id="neighborhood" class="form-control" placeholder="Bairro do Restaurante">
+                            <div class="form-group row">
+                                <div class="col">
+                                    <label for="address">Endereço</label>
+                                    <input type="text" name="address" id="address" class="form-control" placeholder="Endereço do Restaurante">
+                                </div>
+                                <div class="col-3">
+                                    <label for="neighborhood">Bairro</label>
+                                    <input type="text" name="neighborhood" id="neighborhood" class="form-control" placeholder="Bairro">
+                                </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-3">
@@ -105,7 +110,7 @@
                                 <button type="button" class="btn btn-lg btn-danger">Continuar</button>
                             </div>
                         </div>
-                        <div id="acesso">
+                        <div style="display: none" id="acesso">
                             <h3 class="text-center mt-5 mb-5">Dados de Acesso</h3>
                             <div class="form-group">
                                 <label for="email">Email</label>
@@ -128,6 +133,8 @@
                 </div>
             </div>
         </div>
+
+        @include('templates.footer')
 
         <!--JS files-->
         <script src="{{asset('js/popper.js')}}"></script>

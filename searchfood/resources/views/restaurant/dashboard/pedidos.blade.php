@@ -31,10 +31,13 @@
 
         <div class="container mt-5">
             <div class="row">
-                <div class="col-5 p-0">
+                <div class="col-4 p-0">
                     <div class="card">
                         <div class="card-header">
                             PEDIDOS EM ABERTO
+                            <span class="badge badge-success badge-pill" style="float: right;font-size: 18px">
+                                0
+                            </span>
                         </div>
                         <div class="card-body">
 

@@ -35,7 +35,7 @@
                     <h3 class="text-center pt-4">
                         Acessar Painel
                     </h3>
-                    <div class="text-center mt-3">
+                    <div class="text-center mt-4">
                         <a href="{{url('/restaurante/cadastro')}}">Cadastrar meu Restaurante</a>
                     </div>
                     <form id="form-login" class="mx-4" action="{{url('restaurante/logar')}}" method="post">

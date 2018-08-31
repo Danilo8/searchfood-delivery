@@ -35,7 +35,7 @@
                     <div class="card">
                         <div class="card-header">
                             <span>CATEGORIA</span>
-                            <button data-toggle="tooltip" data-placement="top" title="ADICIONAR CATEGORIA" style="float: right" type="button" class="btn btn-sm btn-success">
+                            <button type="button" data-toggle="modal" data-target="#categoriaModal" data-tooltip="tooltip" data-placement="top" title="ADICIONAR CATEGORIA" style="float: right" class="btn btn-sm btn-success">
                                 <i class="fa fa-plus-circle"></i>
                             </button>
                         </div>
@@ -61,12 +61,34 @@
             </div>
         </div>
 
+        <!-- Modal para cadastrar Categorias -->
+        <div class="modal fade" id="categoriaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--JS files-->
         <script src="{{asset('js/popper.js')}}"></script>
         <script src="{{asset('js/bootstrap.js')}}"></script>
         <script type="text/javascript">
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
+                $('[data-tooltip="tooltip"]').tooltip()
             });
         </script>
     </body>

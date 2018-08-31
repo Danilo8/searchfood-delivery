@@ -16,8 +16,29 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+        <!--fa fa-icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         @include('templates.navbar')
+
+        <div class="container-fluid pt-5">
+            <h1 class="text-center">
+                Entrar em Contato
+            </h1>
+            <div class="container">
+                <div id="div-contato" class="card">
+                    <form action="" method="post" id="form-contato">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <input type="text" name="" id="" class="form-control">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        @include('templates.footer')
     </body>
 </html>

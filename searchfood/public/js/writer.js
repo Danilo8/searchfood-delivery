@@ -1,5 +1,5 @@
 var div = document.getElementById('writer');
-var textos = ['suas vendas', 'seus clientes', 'o lucro do seu estabelecimento'];
+var textos = ['suas vendas', 'seus clientes', 'seus lucros'];
 
 function escrever(str, done) {
     var char = str.split('').reverse();
