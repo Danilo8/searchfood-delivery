@@ -11,9 +11,6 @@
 
         <!--cdn Bootstrap CSS file-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-        <!--CSS files-->
-        <link rel="stylesheet" href="{{asset('css/cadastro.css')}}">
         
         <!--CSS files-->
         <link rel="stylesheet" href="{{asset('css/restaurante-cadastro.css')}}">
@@ -24,17 +21,19 @@
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     </head>
     <style>
-        body{background:url('{{asset('img/bg/')}}')no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
+        .container-fluid{background:url('{{asset('img/bg/bg-cadastro-2.jpg')}}')no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
     </style>
     <body>
         @include('templates.navbar')
 
-        <div class="container">
-            <h1 class="text-center mt-5">
+        <div class="container-fluid pt-4">
+            <h1 class="text-center pt-5 text-white">
                 Faça parte do Search Food e
                 <p>aumente <span id="writer"></span></p>
             </h1>
-            <div style="" class="card mx-5">
+        </div>
+        <div class="container mb-4">
+            <div class="card mx-5">
                 <div class="card-body">
                     <form id="form-cadastro" action="" method="post">
                         <div id="owner">
