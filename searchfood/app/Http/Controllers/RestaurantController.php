@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use app\Restaurant;
+use app\Menu;
+use app\Category;
 
 class RestaurantController extends Controller
 {
@@ -19,6 +22,20 @@ class RestaurantController extends Controller
         } else {
             echo "Página não encontrada!";
         }
+    }
+
+    /**
+     * --------------------------------------------------------------------------
+     * Função que cadastra o Restaurante no Banco de Dados
+     * --------------------------------------------------------------------------
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     * --------------------------------------------------------------------------
+     */
+    public function cadastrar(Request $request)
+    {
+        Restaurant::cadastro($request->all());
+        return redirect('/')->with(['' => '']);
     }
 
     /**

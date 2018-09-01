@@ -14,3 +14,6 @@ body {
 .card-footer{
     background-color: #fff;
 }
+.form-control {
+    border-radius: 1rem;
+}

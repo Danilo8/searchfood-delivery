@@ -44,7 +44,7 @@
             <div class="card mx-5">
                 <div class="card-body">
                     <form id="form-cadastro" action="" method="post">
-                        <div style="display: none" id="owner">
+                        <div style="display: block" id="owner">
                             <h3 class="text-center mt-5 mb-5">Dados do Proprietário</h3>
                             <div class="form-group">
                                 <label for="owner_name">Nome</label>
@@ -70,7 +70,7 @@
                                 <button id="btn1" type="button" class="btn btn-lg btn-danger disabled">Continuar</button>
                             </div>
                         </div>
-                        <div style="display: block" id="restaurant">
+                        <div style="display: none" id="restaurant">
                             <h3 class="text-center mt-5 mb-5">Dados do Restaurante</h3>
                             <div class="form-group">
                                 <label for="restaurant_name">Nome</label>
@@ -148,8 +148,8 @@
                                 <input type="password" name="c_password" id="c_password" class="form-control" placeholder="Confirme a Senha">
                             </div>
                             <div class="form-group text-right">
-                                <button type="button" class="btn btn-lg btn-secondary">Voltar</button>
-                                <button type="button" class="btn btn-lg btn-danger">Continuar</button>
+                                <button id="vtr2" type="button" class="btn btn-lg btn-secondary">Voltar</button>
+                                <button id="btn3" type="button" class="btn btn-lg btn-danger">Continuar</button>
                             </div>
                         </div>
                     </form>
