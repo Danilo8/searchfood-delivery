@@ -98,10 +98,10 @@
 
             <div class="card mt-5">
                 <div class="card-header">
-                    RELATORIO DE VENDAS
+                    RELATÓRIO DE VENDAS
                 </div>
                 <div class="card-body">
-
+                    <canvas class="" id="relatorioVendas"></canvas>
                 </div>
             </div>
         </div>
@@ -112,6 +112,51 @@
         <script type="text/javascript">
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
+            });
+        </script>
+
+        <!-- Graphs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        <script type="text/javascript">
+            var ctx = document.getElementById("relatorioVendas").getContext('2d');
+            var relatorioVendas = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                    labels: ['5'],
+                    datasets: [{
+                            label: 'Esperando Resposta',
+                            data: ['1'],
+                            borderWidth: 1,
+                            borderColor: '#343a40',
+                            backgroundColor: '#FFFF00'
+                        },
+                        {
+                            label: 'Confirmadas',
+                            data: ['3'],
+                            borderWidth: 1,
+                            borderColor: '#343a40',
+                            backgroundColor: '#28a745'
+                        },
+                        {
+                            label: 'Fechadas',
+                            data: ['3'],
+                            borderWidth: 1,
+                            borderColor: '#343a40',
+                            backgroundColor: '#800000'
+                        },
+                        {
+                            label: 'Canceladas',
+                            data: ['5'],
+                            borderWidth: 1,
+                            borderColor: '#343a40',
+                            backgroundColor: '#FF0000'
+                        }]
+                },
+                options: {
+                    labels: {
+                        fontStyle: "bold"
+                    }
+                }
             });
         </script>
     </body>

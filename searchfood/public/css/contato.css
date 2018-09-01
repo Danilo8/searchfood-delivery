@@ -1,0 +1,15 @@
+@media(min-width: 62rem){
+    #div-form {
+        float: left;
+        width: 40%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 5%;
+    }
+    #div-contatos {
+        float: right;
+        width: 60%;
+        font-size: 18px;
+        margin-top: 5%;
+    }
+}

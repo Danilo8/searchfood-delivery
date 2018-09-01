@@ -8,6 +8,11 @@ nav {
     color: white;
     vertical-align: bottom;
 }
+@media(max-width: 62rem){
+    #logo-text {
+        font-size: 25px;
+    }
+}
 
 .navbar-nav .nav-item .nav-link {
     font-family: 'Open Sans', sans-serif;
