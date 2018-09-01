@@ -47,7 +47,7 @@ Route::get('/entrar','UserController@entrar');
  * Rotas para os Administradores
  * --------------------------------------------------------------------------
  */
-Route::get('/adm/login','Adminitrator@login');
+Route::get('/adm/login','AdminitratorController@login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

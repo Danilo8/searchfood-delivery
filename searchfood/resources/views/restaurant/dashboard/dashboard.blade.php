@@ -83,10 +83,10 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div data-html="true" data-toggle="tooltip" data-placement="<?= $array[rand(0, 3)] ?>" title="Alguma Coisa<br>0" style="padding-top: 10px;color: white;" class="card text-danger">
+                    <div data-html="true" data-toggle="tooltip" data-placement="<?= $array[rand(0, 3)] ?>" title="Alguma Coisa<br>0" style="padding-top: 10px;color: white;" class="card text-warning">
                         <div class="media">
                             <div class="media-left meida media-middle">
-                                <i style="font-size: 30px;margin-left: 10px;border-radius: 20%;padding: 10px;padding-right: 11px;padding-bottom: 8px;margin-bottom: 5px" class="fa fa-eye bg-danger text-white"></i>
+                                <i style="font-size: 30px;margin-left: 10px;border-radius: 20%;padding: 10px;padding-right: 11px;padding-bottom: 8px;margin-bottom: 5px" class="fa fa-star bg-warning text-white"></i>
                             </div>
                             <div style="padding-top: 6px" class="media-body media-text-right">
                                 <h3>0</h3>
