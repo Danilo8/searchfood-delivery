@@ -22,6 +22,11 @@
         
         <!--fa fa-icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--Mask JS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+        <script src="{{asset('js/mask.js')}}"></script>
     </head>
     <style>
         .container-fluid{background:url('{{asset('img/bg/bg-cadastro-2.jpg')}}')no-repeat center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover}
@@ -39,48 +44,56 @@
             <div class="card mx-5">
                 <div class="card-body">
                     <form id="form-cadastro" action="" method="post">
-                        <div style="display: block" id="owner">
+                        <div style="display: none" id="owner">
                             <h3 class="text-center mt-5 mb-5">Dados do Proprietário</h3>
                             <div class="form-group">
                                 <label for="owner_name">Nome</label>
                                 <input type="text" name="owner_name" id="owner_name" class="form-control" placeholder="Nome do Proprietário">
+                                <small class="text-danger" style="float: right" id="error_owner_name"></small>
                             </div>
                             <div class="form-group">
                                 <label for="cpf">CPF</label>
                                 <input type="text" name="cpf" id="cpf" class="form-control" placeholder="CPF do Proprietário">
+                                <small class="text-danger" style="float: right" id="error_cpf"></small>
                             </div>
                             <div class="form-group">
                                 <label for="owner_email">Email</label>
                                 <input type="email" name="owner_email" id="owner_email" class="form-control" placeholder="Email do Proprietário">
+                                <small class="text-danger" style="float: right" id="error_owner_email"></small>
                             </div>
                             <div class="form-group">
                                 <label for="owner_phone">Telefone</label>
                                 <input type="text" name="owner_phone" id="owner_phone" class="form-control" placeholder="Telefone do Proprietário">
+                                <small class="text-danger" style="float: right" id="error_owner_phone"></small>
                             </div>
-                            <div class="form-group text-right">
-                                <button type="button" class="btn btn-lg btn-danger">Continuar</button>
+                            <div class="form-group text-right mt-5">
+                                <button id="btn1" type="button" class="btn btn-lg btn-danger disabled">Continuar</button>
                             </div>
                         </div>
-                        <div style="display: none" id="restaurant">
+                        <div style="display: block" id="restaurant">
                             <h3 class="text-center mt-5 mb-5">Dados do Restaurante</h3>
                             <div class="form-group">
                                 <label for="restaurant_name">Nome</label>
                                 <input type="text" name="restaurant_name" id="restaurant_name" class="form-control" placeholder="Nome do Restaurante">
+                                <small class="text-danger" style="float: right" id="error_restaurant_name"></small>
                             </div>
-                            <div class="form-group row">
+                            <div class="form-group row mt-4">
                                 <div class="col">
                                     <label for="cnpj">CNPJ</label>
                                     <input type="text" name="cnpj" id="cnpj" class="form-control" placeholder="CNPJ do Restaurante">
+                                    <small class="text-danger" style="float: right" id="error_cnpj"></small>
                                 </div>
                                 <div class="col">
                                     <label for="restaurant_phone">Telefone</label>
                                     <input type="text" name="restaurant_phone" id="restaurant_phone" class="form-control" placeholder="Telefone do Restaurante">
+                                    <small class="text-danger" style="float: right" id="error_restaurant_phone"></small>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col">
                                     <label for="address">Endereço</label>
                                     <input type="text" name="address" id="address" class="form-control" placeholder="Endereço do Restaurante">
+                                    <small class="text-danger" style="float: right" id="error_address"></small>
                                 </div>
                                 <div class="col-3">
                                     <label for="neighborhood">Bairro</label>
@@ -98,6 +111,7 @@
                                     <label for="city">Cidade</label>
                                     <select name="city" id="city" class="form-control">
                                         <option value="">Cidade</option>
+                                        <option value="">Cidade</option>
                                     </select>
                                 </div>
                                 <div class="col-4">
@@ -105,8 +119,14 @@
                                     <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="">Tipo de Cozinha</label>
+                                <select name="" id="" class="form-control">
+                                    <option value="">Tipo de Cozinha</option>
+                                </select>
+                            </div>
                             <div class="form-group text-right">
-                                <button type="button" class="btn btn-lg btn-secondary">Voltar</button>
+                                <button id="vtr1" type="button" class="btn btn-lg btn-secondary">Voltar</button>
                                 <button type="button" class="btn btn-lg btn-danger">Continuar</button>
                             </div>
                         </div>
@@ -140,5 +160,6 @@
         <script src="{{asset('js/popper.js')}}"></script>
         <script src="{{asset('js/bootstrap.js')}}"></script>
         <script src="{{asset('js/writer.js')}}"></script>
+        <script src="{{asset('js/valida-cadastro.js')}}"></script>
     </body>
 </html>

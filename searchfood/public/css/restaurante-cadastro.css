@@ -1,6 +1,9 @@
 /*
 * style
 */
+.form-control {
+    border-radius: 1rem;
+}
 .card {
   border: none;
   border-radius: 50%;
@@ -19,6 +22,9 @@
 }
 .btn-danger {
     background-color: #d20911;
+}
+.disabled {
+    cursor: not-allowed;
 }
 .container-fluid {
     height: 70vh;
