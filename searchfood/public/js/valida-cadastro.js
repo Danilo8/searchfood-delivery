@@ -182,20 +182,6 @@ $(document).ready(function () {
     }
 
     /**
-     * -------------------------------------------------------------
-     * Função que troca as divs
-     * -------------------------------------------------------------
-     * @param {*} div_hide 
-     * @param {*} div_show 
-     * @returns void
-     * -------------------------------------------------------------
-     */
-    function animation(div_hide, div_show) {
-        $("#" + div_hide).css({ 'display': 'none' });
-        $("#" + div_show).css({ 'display': 'block' });
-    }
-
-    /**
      * -----------------------------------------------------------------------
      * Validando os Dados do Restaurante
      * -----------------------------------------------------------------------
@@ -311,6 +297,86 @@ $(document).ready(function () {
     });
 
     /**
+     * -----------------------------------------------------------------------
+     * Função que verifica se o campo Bairro do Restaurante 
+     * foi preenchido ou não.
+     * -----------------------------------------------------------------------
+     */
+    $("#neighborhood").blur(function () {
+        if ($("#neighborhood").val() == "") {
+            $("#error_neighborhood").html("Bairro é Obrigatório!");
+            $("#neighborhood").css({ 'border-color': 'red' });
+            neighborhood = false;
+            validaBtn2();
+        } else {
+            $('#error_neighborhood').html("");
+            $('#neighborhood').css({ 'border': '1px solid #ced4da' });
+            neighborhood = true;
+            validaBtn2();
+        }
+    });
+
+    /**
+     * -----------------------------------------------------------------------
+     * Função que verifica se o campo Estado do Restaurante 
+     * foi preenchido ou não.
+     * -----------------------------------------------------------------------
+     */
+    $("#state").blur(function () {
+        if ($("#state").val() == "") {
+            $("#error_state").html("Estado é Obrigatório!");
+            $("#state").css({ 'border-color': 'red' });
+            state = false;
+            validaBtn2();
+        } else {
+            $('#error_state').html("");
+            $('#state').css({ 'border': '1px solid #ced4da' });
+            state = true;
+            validaBtn2();
+        }
+    });
+
+    /**
+     * -----------------------------------------------------------------------
+     * Função que verifica se o campo Cidade do Restaurante 
+     * foi preenchido ou não.
+     * -----------------------------------------------------------------------
+     */
+    $("#city").blur(function () {
+        if ($("#city").val() == "") {
+            $("#error_city").html("Cidade é Obrigatório!");
+            $("#city").css({ 'border-color': 'red' });
+            city = false;
+            validaBtn2();
+        } else {
+            $('#error_city').html("");
+            $('#city').css({ 'border': '1px solid #ced4da' });
+            city = true;
+            validaBtn2();
+        }
+    });
+    
+    /**
+     * -----------------------------------------------------------------------
+     * Função que verifica se o campo CEP do Restaurante 
+     * foi preenchido ou não.
+     * -----------------------------------------------------------------------
+     */
+    $("#cep").blur(function () {
+        if ($("#cep").val() == "") {
+            $("#error_cep").html("CEP é Obrigatório!");
+            $("#cep").css({ 'border-color': 'red' });
+            cep = false;
+            validaBtn2();
+        } else {
+            $('#error_cep').html("");
+            $('#cep').css({ 'border': '1px solid #ced4da' });
+            cep = true;
+            validaBtn2();
+        }
+    });
+
+    /**
     * ----------------------------------------------------------
     * Quando o vtr1 for clicado
     * ----------------------------------------------------------
@@ -318,6 +384,37 @@ $(document).ready(function () {
     $('#vtr1').click(function () {
         animation('restaurant', 'owner');
     });
+
+    /**
+     * ----------------------------------------------------------
+     * Quando o btn2 for clicado
+     * ----------------------------------------------------------
+     */
+    $('#btn2').click(function () {
+        if (btn2) {
+            animation('restaurant', 'acesso');
+        }
+    });
+
+    /**
+     * -----------------------------------------------------------
+     * Função que abilita o btn2
+     * -----------------------------------------------------------
+     * @returns false or true
+     * -----------------------------------------------------------
+     */
+    function validaBtn2() {
+        if (
+            restaurant_name && cnpj && restaurant_phone && address &&
+            neighborhood && state && city && cep
+        ) {
+            $("#btn2").removeClass("disabled");
+            btn2 = true;
+        } else {
+            $("#btn2").addClass("disabled");
+            btn2 = false;
+        }
+    }
 
     /**
      * --------------------------------------------------------
@@ -381,3 +478,21 @@ $(document).ready(function () {
 
     }
 });
+
+/**
+ * ====================================================================
+ */
+
+/**
+ * -------------------------------------------------------------
+ * Função que troca as divs
+ * -------------------------------------------------------------
+ * @param {*} div_hide 
+ * @param {*} div_show 
+ * @returns void
+ * -------------------------------------------------------------
+ */
+function animation(div_hide, div_show) {
+    $("#" + div_hide).css({ 'display': 'none' });
+    $("#" + div_show).css({ 'display': 'block' });
+}

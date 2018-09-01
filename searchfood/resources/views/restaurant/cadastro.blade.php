@@ -98,25 +98,28 @@
                                 <div class="col-3">
                                     <label for="neighborhood">Bairro</label>
                                     <input type="text" name="neighborhood" id="neighborhood" class="form-control" placeholder="Bairro">
+                                    <small class="text-danger" style="float: right" id="error_neighborhood"></small>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-3">
                                     <label for="state">Estado</label>
                                     <select name="state" id="state" class="form-control">
-                                        <option value="">Estado</option>
+                                        
                                     </select>
+                                    <small class="text-danger" style="float: right" id="error_state"></small>
                                 </div>
                                 <div class="col">
                                     <label for="city">Cidade</label>
                                     <select name="city" id="city" class="form-control">
-                                        <option value="">Cidade</option>
-                                        <option value="">Cidade</option>
+                                        
                                     </select>
+                                    <small class="text-danger" style="float: right" id="error_city"></small>
                                 </div>
                                 <div class="col-4">
                                     <label for="cep">CEP</label>
                                     <input type="text" name="cep" id="cep" class="form-control" placeholder="CEP">
+                                    <small class="text-danger" style="float: right" id="error_cep"></small>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -127,7 +130,7 @@
                             </div>
                             <div class="form-group text-right">
                                 <button id="vtr1" type="button" class="btn btn-lg btn-secondary">Voltar</button>
-                                <button type="button" class="btn btn-lg btn-danger">Continuar</button>
+                                <button id="btn2"  type="button" class="btn btn-lg btn-danger disabled">Continuar</button>
                             </div>
                         </div>
                         <div style="display: none" id="acesso">
@@ -161,5 +164,6 @@
         <script src="{{asset('js/bootstrap.js')}}"></script>
         <script src="{{asset('js/writer.js')}}"></script>
         <script src="{{asset('js/valida-cadastro.js')}}"></script>
+        <script type="text/javascript">$(document).ready(function(){$.getJSON("{{asset('js/estados_cidades.json')}}",function(o){var t='<option value="">Estado</option>';$.each(o,function(o,n){t+='<option value="'+n.sigla+'">'+n.sigla+"</option>"}),$("#state").html(t),$("#state").change(function(){var t="",n="";$("#state option:selected").each(function(){n+=$(this).text()}),$.each(o,function(o,a){a.sigla==n&&$.each(a.cidades,function(o,n){t+='<option value="'+n+'">'+n+"</option>"})}),$("#city").html(t)}).change()})});</script>
     </body>
 </html>
