@@ -34,7 +34,7 @@
     <body>
         @include('templates.navbar')
 
-        <div style="margin-bottom: 55%" class="container-fluid pt-4">
+        <div style="" class="container-fluid pt-4">
             <h1 class="text-center pt-5 text-white">
                 Faça parte do Search Food e
                 <p>aumente <span id="writer"></span></p>

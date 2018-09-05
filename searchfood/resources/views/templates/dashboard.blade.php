@@ -30,21 +30,41 @@
     <span></span>
     <ul class="nav justify-content-center">
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/restaurante/dashboard')}}">DASHBOARD</a>
+            @if (explode('/', Request::url())[4] == 'dashboard')
+                <a class="nav-link active" href="{{url('/restaurante/dashboard')}}">DASHBOARD</a>
+            @else
+                <a class="nav-link" href="{{url('/restaurante/dashboard')}}">DASHBOARD</a>
+            @endif            
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/restaurante/pedidos')}}">PEDIDOS</a>
+            @if (explode('/', Request::url())[4] == 'pedidos')
+                <a class="nav-link active" href="{{url('/restaurante/pedidos')}}">PEDIDOS</a>
+            @else
+                <a class="nav-link" href="{{url('/restaurante/pedidos')}}">PEDIDOS</a>
+            @endif
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/restaurante/cardapio')}}">CARDÁPIO</a>
+            @if (explode('/', Request::url())[4] == 'cardapio')
+                 <a class="nav-link active" href="{{url('/restaurante/cardapio')}}">CARDÁPIO</a>
+            @else
+                 <a class="nav-link" href="{{url('/restaurante/cardapio')}}">CARDÁPIO</a>
+            @endif           
         </li>
         <li class="nav-item border">
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/restaurante/administrador')}}">ADMINISTRADOR</a>
+            @if (explode('/', Request::url())[4] == 'administrador')
+                <a class="nav-link active" href="{{url('/restaurante/administrador')}}">ADMINISTRADOR</a>
+            @else
+                <a class="nav-link" href="{{url('/restaurante/administrador')}}">ADMINISTRADOR</a>
+            @endif            
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{url('/restaurante/relatorios')}}">RELATÓRIOS</a>
+            @if (explode('/', Request::url())[4] == 'relatorios')
+                <a class="nav-link active" href="{{url('/restaurante/relatorios')}}">RELATÓRIOS</a>
+            @else
+                <a class="nav-link" href="{{url('/restaurante/relatorios')}}">RELATÓRIOS</a>
+            @endif            
         </li>
     </ul>
     <span></span>

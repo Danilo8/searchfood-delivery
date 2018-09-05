@@ -7,7 +7,7 @@
     <div class="text-center">
         <ul class="list-unstyled list-inline">
             <li class="list-inline-item">
-                <a id="i" target="_blanck1" href="https://www.facebook.com" class="fa fa-facebook"></a>
+                <a id="i" target="_blanck1" href="https://www.facebook.com/" class="fa fa-facebook"></a>
             </li>
             <li class="list-inline-item">
                 <a id="i" target="_blanck2" href="https://www.instagram.com/" class="fa fa-instagram"></a>

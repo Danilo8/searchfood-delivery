@@ -48,6 +48,8 @@ Route::get('/entrar','UserController@entrar');
  * --------------------------------------------------------------------------
  */
 Route::get('/adm/login','AdminitratorController@login');
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/restaurante/dashboard', 'HomeController@');
